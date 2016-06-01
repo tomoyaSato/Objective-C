@@ -10,12 +10,8 @@
 
 int main(int argc, const char * argv[]) {
     
-    int i = 0;
-    
-    while(i <= 12){
-        
-        printf("Aaron is Cool\n");//ループ表示させたい
-        i++;
+    for(int i = 0; i < 12; i++){
+        printf("%d. Aaron is Cool\n", i);//ループ表示させたい
     }
     
     return 0;
