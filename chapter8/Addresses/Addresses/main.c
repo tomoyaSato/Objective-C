@@ -9,7 +9,9 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    int i = 17;
+    int *addressOfI = &i; //iのアドレスをポインタ変数addressOfIに代入
+    printf("i stores its value at %p\n", addressOfI);
+    
     return 0;
 }
