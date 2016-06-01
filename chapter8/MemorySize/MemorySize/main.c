@@ -9,7 +9,16 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+   
+    
+    int shortsize = 2;
+    int loop = (8 * sizeof(short)) -1;//bit数
+    while(loop > 1){
+        shortsize *=  2;
+        loop--;
+    }
+    printf("float size is %zu\n",sizeof(float));
+    printf("short max is %d\n" ,shortsize);
+    printf("short min ix %d\n", (-1) * shortsize);
     return 0;
 }
