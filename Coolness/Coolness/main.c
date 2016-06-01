@@ -10,9 +10,14 @@
 
 int main(int argc, const char * argv[]) {
     
-    for(int i = 0; i < 12; i++){
-        printf("%d. Aaron is Cool\n", i);//ループ表示させたい
+    int i;
+    for(i = 0; i < 12; i++){
+        printf("Checking i = %d\n", i);
+        if(i + 90 == i * i){
+            break;
+        }
     }
+    printf("The answer is %d.\n", i);
     
     return 0;
 }
