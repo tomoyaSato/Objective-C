@@ -9,7 +9,10 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    int x = 255;
+    printf("x is %d.\n", x);
+    printf("In local, x is %o. \n", x);
+    printf("In hexadecimea, x is %x.\n", x);
+    
     return 0;
 }
