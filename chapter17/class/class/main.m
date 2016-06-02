@@ -16,12 +16,12 @@ int main(int argc, const char * argv[]) {
         
         //インスタンス変数に値を設定する
         [person setWeightInKilos:96];//ドット記法にできない？
-        [person setHeightInMeters:1.8];//同じく
+        [person setHeightInMeters:1.8];
         
         //bodyMassIndexメソッドを呼び出す
         float bmi = person.bodyMathIndex;
         //NSLog(@"Person has a BMI of %f", bmi);
-        NSLog(@"person (%d, %.2f) has a BMI of %f",person.getWeightInkilos, person.getHeightInMeters, bmi);
+        NSLog(@"person (%d, %.2f) has a BMI of %f",person.weightInKilos, person.heightInMeters, bmi);
     }
     return 0;
 }

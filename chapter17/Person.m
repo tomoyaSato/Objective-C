@@ -10,23 +10,8 @@
 #import "Person.h"
 
 @implementation Person
-//Person.hがインタフェースとなっていて実態がPerson.m？疎結合としている？
 
--(void)setHeightInMeters:(float)h{
-    heightInMeters = h;
-}
-
--(float)getHeightInMeters{
-    return heightInMeters;
-}
-
--(int)getWeightInkilos{
-    return weightInKilos;
-}
-
--(void)setWeightInKilos:(int)w{
-    weightInKilos = w;
-}
+@synthesize heightInMeters, weightInKilos;
 
 -(float)bodyMathIndex{
     return weightInKilos / (heightInMeters * heightInMeters);

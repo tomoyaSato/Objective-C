@@ -15,11 +15,16 @@
 }
 
 //メソッドの宣言
+/*
 -(float)getHeightInMeters;
 -(void)setHeightInMeters:(float)h;
 -(int)getWeightInkilos;
 -(void)setWeightInKilos:(int)w;
 
+*/
+
+@property float heightInMeters;
+@property int weightInKilos;
 -(float)bodyMathIndex;
 
 @end
