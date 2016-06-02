@@ -18,13 +18,11 @@ int main(int argc, const char * argv[]) {
         //３つのオブジェクトを保持する配列を生成する（nilはリストの終端を意味する）
         NSArray *dateList = [NSArray arrayWithObjects:now, tomorrow, yesterday, nil];
         
-        //配列にはNSDateがいくつあるか？
-        NSLog(@"There are %lu dates", [dateList count]);
-        
-        //そのうち2つを表示する
-        NSLog(@"The first date is %@",[dateList objectAtIndex:0]);//objectAtIndexで配列の要素にアクセスできる
-        NSLog(@"The third date is %@",[dateList objectAtIndex:2]);
-        
+        NSUInteger count = [dateList count];
+        for(int i = 0; i < count; i++){
+            NSDate *d = [dateList objectAtIndex:i];
+            NSLog(@"The first date is %@",d);//objectAtIndexで配列の要素にアクセスできる
+        }
         
     }
     return 0;
