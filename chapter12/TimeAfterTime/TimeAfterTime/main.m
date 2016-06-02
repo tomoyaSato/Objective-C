@@ -14,7 +14,9 @@ int main(int argc, const char * argv[]) {
         NSDate *now = [NSDate date];
         //printfと同じような働きをする
         //\nが必要ない
-        NSLog(@"The new date lives at %p", now);
+        //%pはアドレスのトークン
+        //%@はobject情報のトークン
+        NSLog(@"The date is %@", now);
     }
     return 0;
 }
