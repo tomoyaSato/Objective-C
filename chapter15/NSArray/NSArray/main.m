@@ -16,7 +16,7 @@ int main(int argc, const char * argv[]) {
         NSDate *yesterday = [now dateByAddingTimeInterval:-24.0 * 60.0 * 60.0];
         
         NSMutableArray *dateList = [NSMutableArray array];
-        
+    
         [dateList addObject:now];
         [dateList addObject:tomorrow];
         
@@ -31,6 +31,21 @@ int main(int argc, const char * argv[]) {
         //先頭を削除
         [dateList removeObjectAtIndex: 0];
         NSLog(@"Now the first date is %@", [dateList objectAtIndex: 0]);
+        
+        
+        //新しい書き方
+        NSArray *array = @[@"Apple",@"grap",@"orange"];
+        NSLog(@"How to new write : %@",array);
+        
+        //新しい書き方　その２
+        NSMutableArray *marray = [NSMutableArray array];
+        [marray addObject:now];
+        [marray addObject:tomorrow];
+        NSString *str = marray[0];
+        marray[0] = @"peach";
+        NSLog(@"%@",str);
+        NSLog(@"%@",marray[0]);
+        
         
         /*
         //３つのオブジェクトを保持する配列を生成する（nilはリストの終端を意味する）
