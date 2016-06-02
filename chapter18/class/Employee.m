@@ -12,4 +12,9 @@
 
 @synthesize employeeID;
 
+//改めてEmployee.hに宣言する必要はない --Personを継承しているため
+-(float)bodyMathIndex{
+    return 19.0;
+}
+
 @end
