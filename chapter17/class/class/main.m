@@ -15,8 +15,8 @@ int main(int argc, const char * argv[]) {
         Person *person = [[Person alloc] init];//Personインスタンスを生成するメモリを確保
         
         //インスタンス変数に値を設定する
-        [person setWeightInKilos:96];//ドット記法にできない？
-        [person setHeightInMeters:1.8];
+        person.weightInKilos = 96;//ドット記法にできない？
+        person.heightInMeters = 1.8;
         
         //bodyMassIndexメソッドを呼び出す
         float bmi = person.bodyMathIndex;
