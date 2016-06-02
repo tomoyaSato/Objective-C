@@ -14,7 +14,10 @@
 
 //改めてEmployee.hに宣言する必要はない --Personを継承しているため
 -(float)bodyMathIndex{
-    return 19.0;
+    //superはスーパクラスのメソッドを検索するという意味
+    //つまり、スーパークラスの.bodyMathIndexということになる
+    float normalBMI = super.bodyMathIndex;
+    return normalBMI * 0.9;
 }
 
 @end
