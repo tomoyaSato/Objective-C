@@ -15,6 +15,15 @@
 -(void)setHeightInMeters:(float)h{
     heightInMeters = h;
 }
+
+-(float)getHeightInMeters{
+    return heightInMeters;
+}
+
+-(int)getWeightInkilos{
+    return weightInKilos;
+}
+
 -(void)setWeightInKilos:(int)w{
     weightInKilos = w;
 }

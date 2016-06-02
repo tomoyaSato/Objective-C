@@ -20,8 +20,8 @@ int main(int argc, const char * argv[]) {
         
         //bodyMassIndexメソッドを呼び出す
         float bmi = [person bodyMathIndex];
-        NSLog(@"Person has a BMI of %f", bmi);
-        
+        //NSLog(@"Person has a BMI of %f", bmi);
+        NSLog(@"person (%d, %.2f) has a BMI of %f",[person getWeightInkilos], [person getHeightInMeters], bmi);
     }
     return 0;
 }
