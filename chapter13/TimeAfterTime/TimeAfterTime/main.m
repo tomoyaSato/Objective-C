@@ -16,6 +16,7 @@ int main(int argc, const char * argv[]) {
         //\nが必要ない
         //%pはアドレスのトークン
         //%@はobject情報のトークン
+        /*
         NSLog(@"The date is %@", now);
         
         double seconds = [now timeIntervalSince1970];//nowオブジェクトの中にtimeIntervalSince1970というメソッドがある？
@@ -23,6 +24,12 @@ int main(int argc, const char * argv[]) {
         
         NSDate *later = [now dateByAddingTimeInterval:100000];
         NSLog(@"IN 100,000 seconds it will be %@", later);
+        */
+        NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+        NSUInteger day = [cal ordinalityOfUnit:NSCalendarUnitDay
+                                        inUnit:NSCalendarUnitMonth
+                                       forDate:now];
+        NSLog(@"This is dya %lu of the month", day);
     }
     return 0;
 }
