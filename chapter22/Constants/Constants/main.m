@@ -11,6 +11,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         //NSStringのリテラルでは、\uを使って任意のUnicode文字を表す
+        //maxは関数ではない
         NSLog(@"\u03c0 is %f", M_PI);
         NSLog(@"%d is larger", MAX(10,12));
     }
