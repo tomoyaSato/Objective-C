@@ -10,6 +10,8 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+      /*
+        //ファイルの書き出し
         NSMutableString *str = [[NSMutableString alloc] init];
         
         for(int i = 0; i < 10; i++){
@@ -36,6 +38,19 @@ int main(int argc, const char * argv[]) {
                    error:NULL];
         
         NSLog(@"dane writing /tmp/cool.txt");
+       */
+        
+        //ファイルの読み込み
+        NSError *error = nil;
+        //resolv.confをstrに格納
+        NSString *str = [[NSString alloc] initWithContentsOfFile:@"/etc/resolv.conf"
+                                                        encoding:NSASCIIStringEncoding
+                                                           error:&error];
+        if(!str){
+            NSLog(@"read failed: %@", [error localizedDescription]);
+        }else{
+            NSLog(@"resolv.conf looks like this: %@", str);
+        }
     }
     return 0;
 }
