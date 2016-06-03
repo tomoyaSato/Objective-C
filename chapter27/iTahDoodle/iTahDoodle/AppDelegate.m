@@ -15,7 +15,8 @@
 
 NSString *docPath(void)
 {
-    NSArray *pathList = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray *pathList = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                            NSUserDomainMask, YES);
     return [[pathList objectAtIndex:0] stringByAppendingPathComponent:@"data.td"];
 }
 
@@ -54,8 +55,8 @@ numberOfRowsInSection:(NSInteger)section
 
 #pragma mark - Application delegate callbacks
 
-- (BOOL)application:(UIApplication *)
-application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (BOOL)application:(UIApplication *)application
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSArray *plist =[NSArray arrayWithContentsOfFile:docPath()];
     if(plist){
@@ -96,7 +97,7 @@ application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     //テキストフィールドを生成して構成する（新しいタスクの入力）
     taskField = [[UITextField alloc] initWithFrame:fieldFrame];
     [taskField setBorderStyle:UITextBorderStyleRoundedRect];
-    [taskField setFrame:buttonFrame];
+    [taskField setPlaceholder:@"Type a task, tap Insert"];
     
     //がどの丸いInsertボタンを生成して構成する
     insertButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
