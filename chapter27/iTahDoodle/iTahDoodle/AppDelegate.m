@@ -8,11 +8,6 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
-
-@end
-
-
 NSString *docPath(void)
 {
     NSArray *pathList = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
@@ -23,6 +18,7 @@ NSString *docPath(void)
 @implementation AppDelegate
 
 //ここに追加
+
 #pragma mark - table View management
 -(NSInteger)tableView:(UITableView *)tableView
 numberOfRowsInSection:(NSInteger)section
@@ -59,6 +55,7 @@ numberOfRowsInSection:(NSInteger)section
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSArray *plist =[NSArray arrayWithContentsOfFile:docPath()];
+    
     if(plist){
         //データが存在するなら、インスタンス変数にコピーする
         tasks = [plist mutableCopy];
@@ -74,11 +71,15 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         [tasks addObject:@"Chop the logs"];
     }
     
+    
     //UIWindowインスタンスを生成して構成する
     //CGRectは原点(x,y)と大きさ(width,height)を持つ構造体
-    CGRect windowFrame = [[UIScreen mainScreen]bounds];
+    CGRect windowFrame = [[UIScreen mainScreen] bounds];
     UIWindow *theWindow = [[UIWindow alloc] initWithFrame:windowFrame];
-    [self setWindow:theWindow];
+    
+    //↓この記述があるとエラー発生
+    //[self setWindow:theWindow];
+    
     
     //3つのUI要素のためのフレーム矩形領域を定義する
     //CGRectMake()は(x, y , width, height)からCGRectを生成する
@@ -124,6 +125,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     return YES;
 }
 
+
 - (void)addTask:(id)sender
 {
     NSString *t = [taskField text];
@@ -138,6 +140,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     [taskField resignFirstResponder];
 }
 
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -146,6 +149,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    [tasks writeToFile:docPath() atomically:YES];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -158,6 +163,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [tasks writeToFile:docPath() atomically:YES];
 }
 
 @end
