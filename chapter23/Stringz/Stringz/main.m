@@ -15,9 +15,25 @@ int main(int argc, const char * argv[]) {
         for(int i = 0; i < 10; i++){
             [str appendString:@"Aaron is cool!\n"];//文字を追加する
         }
+        
+        //インスタンスを生成しなくともwirteToFile:encoding:error側でインスタンス生成してくれる
+        NSError *error = nil;
+        BOOL success = [str writeToFile:@"tmp/cool.txt"
+                            atomically:YES
+                              encoding:NSUTF8StringEncoding
+                                 error:&error];
+        //BOOLの戻り値をチェックし、失敗の場合はNSErrorに理由を問い合わせる
+        if(success){
+            NSLog(@"done writing /tem/cool.txt");
+        }else{
+            NSLog(@"error localizedDescription");
+        }
+        
         //NSMutableString の writeToFileメソッドでファイルパスを指定
         [str writeToFile:@"/tmp/cool.txt"
-              atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+              atomically:YES
+                encoding:NSUTF8StringEncoding
+                   error:NULL];
         
         NSLog(@"dane writing /tmp/cool.txt");
     }
