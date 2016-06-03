@@ -41,7 +41,7 @@ int main(int argc, const char * argv[]) {
             [asset setResaleValue:i *17];
             
             //0以上9以下の乱数を生成する
-            NSUInteger *randomIndex = random() % [employees count];
+            NSUInteger randomIndex = random() % [employees count];
             
             //Employeeインスタンスを決める
             Employee *randomEmployee = [employees objectAtIndex:randomIndex];

@@ -20,6 +20,8 @@
         assets = [[NSMutableArray alloc]init];
     }
     [assets addObject:a];
+    [a setHolder:self];//AssetのholderにEmployeeのアドレスを保存
+    
 }
 -(unsigned int)valueOfAssets{
     //assetsのresaleValueを合計する

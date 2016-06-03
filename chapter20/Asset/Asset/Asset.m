@@ -7,13 +7,21 @@
 //
 
 #import "Asset.h"
+#import "Employee.h"
 
 @implementation Asset
-@synthesize label,resaleValue;
+@synthesize label,holder,resaleValue;
 
 -(NSString *) description
 {
-    return [NSString stringWithFormat:@"<%@: $%d>",self.label, self.resaleValue];
+   // holder が　nilでないか？
+    if([self holder]){
+        return [NSString stringWithFormat:@"<%@: $%d, assigned to %@>",
+                [self label], [self resaleValue], [self holder] ];
+    }else{
+        return [NSString stringWithFormat:@"<%@: $%d unassigned>",
+                [self label],[self resaleValue]];
+    }
 }
 
 -(void)dealloc
