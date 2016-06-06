@@ -17,7 +17,7 @@ int main(int argc, const char * argv[]) {
         [a setValue:@"washing machine" forKey:@"productName"];
         NSLog(@"a is %@", a);
         
-        NSLog(@"the product name is %@", [a valueForKey:@"productNammmmmmmme"]);
+        NSLog(@"the product name is %@", [a valueForKey:@"productName"]);
     }
     return 0;
 }
