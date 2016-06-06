@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^ArrayEnumerationBlock)(id, NSUInteger, BOOL *);
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         //　変換対象文字列の配列を￥と、母音を取り除いた文字列を格納する配列を生成する
@@ -19,10 +21,22 @@ int main(int argc, const char * argv[]) {
         
         //　ブロック変数を宣言する
         //devowelizerは変数名
-        void (^devowelizer)(id,NSUInteger, BOOL *);
+        //void (^devowelizer)(id,NSUInteger, BOOL *);
+        //typedefにより簡単に記述できる
+        ArrayEnumerationBlock devowelizer;
         
         //変数にブロックを代入する
         devowelizer = ^(id string, NSUInteger i, BOOL *stop) {
+            NSRange yRange = [string rangeOfString:@"y"
+                                           options:NSCaseInsensitiveSearch];
+            
+            //yがあるか判定
+            if (yRange.location != NSNotFound) {
+                *stop = YES; //これより後のイテレートは不要
+                return ;
+            }
+            
+            
             NSMutableString *newString = [NSMutableString stringWithString:string];
             
             //配列vowelsをイテレートしてそれぞれの母音を空文字列に置き換える
