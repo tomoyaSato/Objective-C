@@ -54,6 +54,13 @@ numberOfRowsInSection:(NSInteger)section
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    // ウィンドウ初期化
+    //この部分追加により強制killを防止iOS9
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [UIViewController new];
+    [self.window makeKeyAndVisible];
+    
     NSArray *plist =[NSArray arrayWithContentsOfFile:docPath()];
     
     if(plist){
@@ -70,15 +77,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         [tasks addObject:@"Feed the hogs"];
         [tasks addObject:@"Chop the logs"];
     }
-    
-    
-    //UIWindowインスタンスを生成して構成する
-    //CGRectは原点(x,y)と大きさ(width,height)を持つ構造体
-    CGRect windowFrame = [[UIScreen mainScreen] bounds];
-    UIWindow *theWindow = [[UIWindow alloc] initWithFrame:windowFrame];
-    
-    //↓この記述があるとエラー発生
-    //[self setWindow:theWindow];
     
     
     //3つのUI要素のためのフレーム矩形領域を定義する
