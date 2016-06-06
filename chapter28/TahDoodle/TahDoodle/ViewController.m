@@ -21,11 +21,10 @@
 
     // Update the view, if already loaded.
 }
+
 - (IBAction)pushBotton:(id)sender {
-    NSLog(@"push botton");
+     NSLog(@"push botton");
+    _myLabel.stringValue = textField.stringValue();
+    
 }
-
-
-
-
 @end
