@@ -11,11 +11,11 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         //　変換対象文字列の配列を￥と、母音を取り除いた文字列を格納する配列を生成する
-        NSArray *oldString = [NSArray arrayWithObjects:@"Sauerkraut",@"Raygun",@"Big Nerd",@"Mississippi", nil];
+        NSArray *oldString = [NSArray arrayWithObjects:@"Sauerkraut", @"Raygun", @"Big Nerd", @"Mississippi", nil];
         NSLog(@"odl strings: %@", oldString);
         NSMutableArray *newStrings = [NSMutableArray array];
         //文字列から取り除く母音の配列を生成する
-        NSArray *vowels = [NSArray arrayWithObjects:@"a",@"e",@"i",@"o",@"u", nil];
+        NSArray *vowels = [NSArray arrayWithObjects:@"a", @"e", @"i", @"o", @"u", nil];
         
         //　ブロック変数を宣言する
         //devowelizerは変数名
