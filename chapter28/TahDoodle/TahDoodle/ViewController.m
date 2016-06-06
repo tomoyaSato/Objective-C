@@ -24,7 +24,9 @@
 
 - (IBAction)pushBotton:(id)sender {
      NSLog(@"push botton");
-    _myLabel.stringValue = textField.stringValue();
+    //ラベル名 myLabel
+    //テキストフィールド名　textFiele
+    myLabel.stringValue = textField.stringValue;
     
 }
 @end
