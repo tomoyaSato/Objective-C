@@ -8,6 +8,25 @@
 
 #import "Appliance.h"
 
+
+@interface Appliance()
+
+@property (copy) NSString *productName;
+@property int voltage;@end
+
+
 @implementation Appliance
+
+
+- (id) init
+{
+    self = [super init];
+    
+    if (self) {
+        _voltage = 120;//_でアクセスすると何が違う？
+    }
+    
+    return self;
+}
 
 @end
