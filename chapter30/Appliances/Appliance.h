@@ -10,8 +10,8 @@
 
 @interface Appliance : NSObject
 {
-    NSString *productName;
-    int voltage;
+    //NSString *productName;
+    //int voltage;
 }
 
 
