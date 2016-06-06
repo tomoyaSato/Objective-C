@@ -13,8 +13,11 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Appliance *a  = [[Appliance alloc] init];
         NSLog(@"a is %@ ", a);
-        a.productName = @"Washing Machine";
+        //この場合"setProductName"というメソッドを探し、見つからなければインスタンス変数に直接アクセスする
+        [a setValue:@"washing machine" forKey:@"productName"];
         NSLog(@"a is %@", a);
+        
+        NSLog(@"the product name is %@", [a valueForKey:@"productNammmmmmmme"]);
     }
     return 0;
 }

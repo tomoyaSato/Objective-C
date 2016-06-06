@@ -15,12 +15,12 @@
 }
 
 
-@property (copy) NSString *productName;
+@property (copy, nonatomic) NSString *productName;
 
 //プロパティにreadwriteまたはreadonlyのどちらかを指定できる
 //デフォルトはreadwrite
 //setterメソッドを生成したくない場合はreadonlyを指定する
-@property int voltage;
+@property (nonatomic) int voltage;
 - (id) initWithProductname:(NSString *)pn;
 
 
