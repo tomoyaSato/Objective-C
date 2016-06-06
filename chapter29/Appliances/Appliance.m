@@ -9,24 +9,34 @@
 #import "Appliance.h"
 
 
-@interface Appliance()
-
-@property (copy) NSString *productName;
-@property int voltage;@end
 
 
 @implementation Appliance
+@synthesize productName, voltage;
 
-
-- (id) init
+- (id) initWithProductname:(NSString *)pn
 {
     self = [super init];
     
     if (self) {
-        _voltage = 120;//_でアクセスすると何が違う？
+        // productNameを設定
+        [self setProductName:pn];
+        voltage = 120;//_でアクセスすると何が違う？
     }
     
     return self;
+}
+
+/*
+- (id) init
+{
+    return [self initWithProductName:@"Unknown"];
+}
+*/
+ 
+-(NSString *)description
+{
+    return [NSString stringWithFormat:@"<%@: %d volts>", productName, voltage];
 }
 
 @end

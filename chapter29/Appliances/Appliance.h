@@ -11,4 +11,9 @@
 @interface Appliance : NSObject
 
 
+@property (copy) NSString *productName;
+@property int voltage;
+- (id) initWithProductname:(NSString *)pn;
+
+
 @end
