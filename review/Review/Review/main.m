@@ -1,6 +1,5 @@
 //
 //  main.m
-//  Review
 //
 //  Created by Minami Kyohei on 2016/06/07.
 //  Copyright © 2016年 Minami Kyohei. All rights reserved.
@@ -40,6 +39,11 @@ int main(int argc, const char * argv[]) {
         for(NSArray *nsa in array){
             NSLog(@"array is %@", nsa);
         }
+        
+        //NSArrayのobjectAtIndexで指定した要素の内容を返す
+        NSLog(@"objectAtIndex practice : %@", [array objectAtIndex:0]);
+        
+        
     }
     return 0;
 }

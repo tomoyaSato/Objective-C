@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E9EDFC4A1D06870E002F8B07 /* Review */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Review; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9EDFC4A1D06870E002F8B07 /* NSMethods */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NSMethods; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EDFC4D1D06870E002F8B07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,7 +49,7 @@
 		E9EDFC4B1D06870E002F8B07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E9EDFC4A1D06870E002F8B07 /* Review */,
+				E9EDFC4A1D06870E002F8B07 /* NSMethods */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,9 +65,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E9EDFC491D06870E002F8B07 /* Review */ = {
+		E9EDFC491D06870E002F8B07 /* NSMethods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E9EDFC511D06870E002F8B07 /* Build configuration list for PBXNativeTarget "Review" */;
+			buildConfigurationList = E9EDFC511D06870E002F8B07 /* Build configuration list for PBXNativeTarget "NSMethods" */;
 			buildPhases = (
 				E9EDFC461D06870E002F8B07 /* Sources */,
 				E9EDFC471D06870E002F8B07 /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = Review;
+			name = NSMethods;
 			productName = Review;
-			productReference = E9EDFC4A1D06870E002F8B07 /* Review */;
+			productReference = E9EDFC4A1D06870E002F8B07 /* NSMethods */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +96,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E9EDFC451D06870E002F8B07 /* Build configuration list for PBXProject "Review" */;
+			buildConfigurationList = E9EDFC451D06870E002F8B07 /* Build configuration list for PBXProject "NSMethods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -108,7 +108,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E9EDFC491D06870E002F8B07 /* Review */,
+				E9EDFC491D06870E002F8B07 /* NSMethods */,
 			);
 		};
 /* End PBXProject section */
@@ -207,21 +207,21 @@
 		E9EDFC521D06870E002F8B07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NSMethods;
 			};
 			name = Debug;
 		};
 		E9EDFC531D06870E002F8B07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NSMethods;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E9EDFC451D06870E002F8B07 /* Build configuration list for PBXProject "Review" */ = {
+		E9EDFC451D06870E002F8B07 /* Build configuration list for PBXProject "NSMethods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9EDFC4F1D06870E002F8B07 /* Debug */,
@@ -230,7 +230,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9EDFC511D06870E002F8B07 /* Build configuration list for PBXNativeTarget "Review" */ = {
+		E9EDFC511D06870E002F8B07 /* Build configuration list for PBXNativeTarget "NSMethods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9EDFC521D06870E002F8B07 /* Debug */,
