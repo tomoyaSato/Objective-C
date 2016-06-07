@@ -49,5 +49,17 @@
 #6月6日  
 ・Objective-Cプログラミング  
 第6部　上級C言語 / ビット演算 / C言語文字列 / C言語配列 / コマンドライン引数 / switch文
+ /*  
+  or演算 and演算　などの bit演算 / ポインタによる文字列操作 / コマンドライン引数の設定など  
+*/  
+  
+復習:NSString / NSArray / iOSアプリケーション  
+/*  
+　NSStringメソッドlengthやisEqualを扱う  
+　NSArrayメソッドcountや高速列挙を扱う
+　UILabel / UIButton / UITextField / UISlider / UIView  
+　などを扱い値の取得、表示を行いUISliderによるUIViewの
+　背景色を動的に変化させるプログラムを作成
+*/
 
 
