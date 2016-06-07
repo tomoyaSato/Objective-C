@@ -17,32 +17,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzv-sF-pFS">
-                                <rect key="frame" x="30" y="37" width="30" height="30"/>
-                                <state key="normal" title="plus"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="change me!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qST-hm-zjZ">
+                                <rect key="frame" x="30" y="8" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzv-sF-pFS" customClass="UIButton1">
+                                <rect key="frame" x="30" y="37" width="83" height="30"/>
+                                <color key="backgroundColor" red="0.45779647225398495" green="0.71734927398989901" blue="0.62808673015814143" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="plus">
+                                    <color key="titleColor" red="0.98065820767293521" green="1" blue="0.98904154951737344" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="action1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xXx-a5-euE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waC-jw-vpM">
-                                <rect key="frame" x="30" y="64" width="41" height="30"/>
+                                <rect key="frame" x="30" y="75" width="83" height="30"/>
+                                <color key="backgroundColor" red="0.45779647229999998" green="0.71734927400000004" blue="0.62808673020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.98420859900742896" green="0.99976439921640081" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="minus"/>
                                 <connections>
                                     <action selector="action2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z4E-y2-R0P"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fT2-kv-rl0">
-                                <rect key="frame" x="30" y="499" width="259" height="30"/>
+                                <rect key="frame" x="30" y="499" width="252" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbG-7v-pOK">
-                                <rect key="frame" x="306" y="499" width="40" height="30"/>
-                                <state key="normal" title="insert"/>
-                                <connections>
-                                    <action selector="action3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9mw-Yd-BMS"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="change me!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWZ-05-AH8">
                                 <rect key="frame" x="30" y="413" width="316" height="71"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -51,31 +55,37 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WM2-yI-Dzn">
                                 <rect key="frame" x="28" y="215" width="320" height="31"/>
+                                <color key="tintColor" red="0.12918293904646072" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="action4:" destination="BYZ-38-t0r" eventType="valueChanged" id="kRY-9f-7nN"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hD9-OG-2Wq">
                                 <rect key="frame" x="28" y="274" width="320" height="31"/>
+                                <color key="tintColor" red="0.0" green="0.16471141916712284" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="action4:" destination="BYZ-38-t0r" eventType="valueChanged" id="INw-z8-qRU"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Lzt-yW-4KU">
                                 <rect key="frame" x="28" y="147" width="320" height="31"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.030145655374868241" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="action4:" destination="BYZ-38-t0r" eventType="valueChanged" id="V2C-uh-F6o"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="change me!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qST-hm-zjZ">
-                                <rect key="frame" x="30" y="15" width="90" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbG-7v-pOK">
+                                <rect key="frame" x="290" y="499" width="56" height="30"/>
+                                <color key="backgroundColor" red="0.39215686274509803" green="0.66666666666666663" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="insert"/>
+                                <connections>
+                                    <action selector="action3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9mw-Yd-BMS"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.98302144437472327" blue="0.93819469081368634" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="1" green="0.0" blue="0.27259695168362086" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.97780994740000005" green="0.97646244230000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="label" destination="qST-hm-zjZ" id="VA5-0J-2Kn"/>
