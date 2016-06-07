@@ -16,7 +16,11 @@
 {
     IBOutlet UILabel *label;
     IBOutlet UITextField *textField;
+    IBOutlet UIView *view;
     __weak IBOutlet UILabel *label2;
+    __weak IBOutlet UISlider *slider1;
+    __weak IBOutlet UISlider *slider2;
+    __weak IBOutlet UISlider *slider3;
     NSString *text;
     int num;
 }
@@ -47,6 +51,12 @@
     [super viewDidLoad];
     num = 0;
     
+}
+- (IBAction)action4:(id)sender {
+    view.backgroundColor = [UIColor colorWithRed:slider1.value
+                                           green:slider2.value
+                                            blue:slider3.value
+                                           alpha:1.0];
 }
 
 - (void)didReceiveMemoryWarning {

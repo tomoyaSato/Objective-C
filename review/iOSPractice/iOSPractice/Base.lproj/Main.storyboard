@@ -50,18 +50,40 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWZ-05-AH8">
-                                <rect key="frame" x="30" y="177" width="316" height="303"/>
+                                <rect key="frame" x="30" y="413" width="316" height="71"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WM2-yI-Dzn">
+                                <rect key="frame" x="28" y="215" width="320" height="31"/>
+                                <connections>
+                                    <action selector="action4:" destination="BYZ-38-t0r" eventType="valueChanged" id="kRY-9f-7nN"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hD9-OG-2Wq">
+                                <rect key="frame" x="28" y="274" width="320" height="31"/>
+                                <connections>
+                                    <action selector="action4:" destination="BYZ-38-t0r" eventType="valueChanged" id="INw-z8-qRU"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Lzt-yW-4KU">
+                                <rect key="frame" x="28" y="147" width="320" height="31"/>
+                                <connections>
+                                    <action selector="action4:" destination="BYZ-38-t0r" eventType="valueChanged" id="V2C-uh-F6o"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="label" destination="qST-hm-zjZ" id="VA5-0J-2Kn"/>
                         <outlet property="label2" destination="KWZ-05-AH8" id="y2h-GN-Dqi"/>
+                        <outlet property="slider1" destination="Lzt-yW-4KU" id="3zc-bZ-MEt"/>
+                        <outlet property="slider2" destination="WM2-yI-Dzn" id="BhJ-bG-woD"/>
+                        <outlet property="slider3" destination="hD9-OG-2Wq" id="1hj-eQ-Xhc"/>
                         <outlet property="textField" destination="fT2-kv-rl0" id="Jtb-99-HqL"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="dQz-7S-saW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
