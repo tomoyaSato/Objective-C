@@ -53,7 +53,7 @@
     
 }
 - (IBAction)action4:(id)sender {
-    view.backgroundColor = [UIColor colorWithRed:slider1.value
+    self.view.backgroundColor = [UIColor colorWithRed:slider1.value
                                            green:slider2.value
                                             blue:slider3.value
                                            alpha:1.0];
