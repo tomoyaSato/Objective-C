@@ -15,16 +15,20 @@
 @implementation ViewController
 {
     IBOutlet UILabel *label;
+    IBOutlet UITextField *textField;
+    __weak IBOutlet UILabel *label2;
     NSString *text;
     int num;
 }
 
+//プラスボタンの処理
 - (IBAction)action1:(id)sender {
     num++;
     text = [NSString stringWithFormat: @"%d", num];
     [label setText:text];
 }
 
+//マイナスボタンの処理
 - (IBAction)action2:(id)sender {
     if (num > 0) {
         num = num - 1;
@@ -33,6 +37,11 @@
     [label setText:text];
 }
 
+//インサートボタンの処理
+
+- (IBAction)action3:(id)sender {
+    [label2 setText:textField.text];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
