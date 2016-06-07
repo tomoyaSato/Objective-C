@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#include "classPractice.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -42,6 +43,13 @@ int main(int argc, const char * argv[]) {
         
         //NSArrayのobjectAtIndexで指定した要素の内容を返す
         NSLog(@"objectAtIndex practice : %@", [array objectAtIndex:0]);
+        
+        
+        //classPracticeインスタンス生成
+        //newに書きかえれない？
+        classPractice *practice = [[classPractice alloc ] init];
+        [practice setHeight:10];
+        NSLog(@"BMI is %d",practice.calcBMI);
         
         
     }
