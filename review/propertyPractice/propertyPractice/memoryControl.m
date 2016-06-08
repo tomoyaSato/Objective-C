@@ -17,10 +17,12 @@
     //継承しているためpropertyを扱うことができる
     
     NSLog(@"label is %@", self.label);
-   
-    //親クラスのメソッド呼び出し
-    [self.W_prp test:self];
     
+    //子のポインタを親に持たせる
+    [_W_prp setMc:self];
+    
+    //親クラスのメソッド呼び出し
+    [_W_prp test:self];
 }
 
 

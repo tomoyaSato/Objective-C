@@ -27,7 +27,7 @@ int main(int argc, const char * argv[]) {
         [prp test:mc];
         
         //出力 HelloProterty
-        [mc getPrpStr];
+        //[mc getPrpStr];
         
         
         

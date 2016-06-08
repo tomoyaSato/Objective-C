@@ -13,13 +13,13 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
     
         __strong NSString *strong1 = [[NSString alloc] initWithFormat:@"りんご"];
-        __weak   NSString *weak1   = strong1;
-        // strong りんご / weak みかん
+        __weak      NSString *weak1   = strong1;
+        // strong りんご / weak りんご
         NSLog(@"strong: %@ , weak: %@", strong1, weak1);
        
         //解放
         strong1 = [[NSString alloc] initWithFormat:@"みかん"];
-         // strong りんご / weak nil
+         // strong みかん / weak nil
         NSLog(@"strong: %@ , weak: %@", strong1, weak1);
         
         /*------*/
