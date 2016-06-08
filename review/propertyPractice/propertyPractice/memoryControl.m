@@ -7,15 +7,20 @@
 //
 
 #import "memoryControl.h"
+#import "property.h"
 
 @implementation memoryControl
 
--(void)getPrpStr:(property *)prp
+- (void)getPrpStr
 {
     // property *prp = [property new];
     //継承しているためpropertyを扱うことができる
-    self.label = prp.str1;
+    
     NSLog(@"label is %@", self.label);
+   
+    //親クラスのメソッド呼び出し
+    [self.W_prp test:self];
+    
 }
 
 

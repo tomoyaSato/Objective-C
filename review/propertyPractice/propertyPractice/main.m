@@ -18,13 +18,16 @@ int main(int argc, const char * argv[]) {
         //インスタンメソッドとして呼び出しに成功
         property *prp = [property new];
         [prp setValue:@"Hello Property" forKey:@"str2"];
-        [prp test];
+        
       
         //memoryControlのメソッド呼び出し
         memoryControl *mc = [memoryControl new];
         
+        //prpのポインタをmcに持たせる
+        [prp test:mc];
+        
         //出力 HelloProterty
-        [mc getPrpStr: prp];
+        [mc getPrpStr];
         
         
         

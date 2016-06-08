@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class memoryControl;
 
 @interface property : NSObject
 {
@@ -15,8 +16,9 @@
 
 @property NSString *str1;
 @property NSString *str2;
+@property memoryControl *mc;
 
 //メソッドの省略は不可？
-- (void)test;
+- (void)test:(memoryControl *)mc;
 
 @end
