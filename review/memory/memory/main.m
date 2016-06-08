@@ -55,6 +55,10 @@ int main(int argc, const char * argv[]) {
             NSLog(@"%@ : %@", strongArray[i], weakArray[i]);
         }
         */
+        
+        Person *person = [Person new];
+        [person loop];
+        
     }
     return 0;
 }

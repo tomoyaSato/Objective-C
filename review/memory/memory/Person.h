@@ -10,7 +10,7 @@
 
 @interface Person : NSObject
 
-@property __strong NSString *Strong;
-@property  __weak NSString *Weak;
+@property Person *person;
+- (void) loop;
 
 @end

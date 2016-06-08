@@ -10,4 +10,9 @@
 
 @implementation Person
 
+- (void) loop
+{
+    NSLog(@"loop now");
+    [self.person loop];
+}
 @end
