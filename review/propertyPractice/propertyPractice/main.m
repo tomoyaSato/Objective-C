@@ -8,14 +8,25 @@
 
 #import <Foundation/Foundation.h>
 #import "property.h"
+#import "memoryControl.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         //[[property alloc] init]を以下のように記述できる
-        //メソッドのようにtest1を呼び出せないよう
+        //メソッドのようにtestを呼び出せない？
+        //インスタンメソッドとして呼び出しに成功
         property *prp = [property new];
+        [prp setValue:@"Hello Property" forKey:@"str2"];
+        [prp test];
       
+        //memoryControlのメソッド呼び出し
+        memoryControl *mc = [memoryControl new];
+        
+        //出力 HelloProterty
+        [mc getPrpStr: prp];
+        
+        
         
     
     }

@@ -8,20 +8,15 @@
 
 #import "property.h"
 
-@interface property()
-@property NSString *str;
-@property NSUInteger num;
-
-//privateメソッドの宣言は不要
-@end
-
 @implementation property
 
-+ (void)test1{
+
+- (void)test{
     // '_'でのプロパティへのアクセスでは値を変更したりできない
     //self.[property名]は独自のsetter getterメソッドを作れる
     //forkeyメソッドはstrを検索し setValueメソッドで格納
-    NSLog(@"Hello");
+    self.str1 = self.str2;
+    NSLog(@"%@", self.str1);
 }
 
 

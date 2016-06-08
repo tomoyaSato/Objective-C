@@ -9,5 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface property : NSObject
+{
+    
+}
+
+@property NSString *str1;
+@property NSString *str2;
+
+//メソッドの省略は不可？
+- (void)test;
 
 @end
