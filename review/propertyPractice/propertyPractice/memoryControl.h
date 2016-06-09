@@ -16,6 +16,7 @@
 }
 //propertyのポインタ
 @property (weak) property *W_prp;
+
 @property NSString *label;
 -(void)getPrpStr;
 

@@ -13,6 +13,7 @@
 - (void) loop
 {
     NSLog(@"loop now");
-    [self.person loop];
+    [self loop];
+    NSLog(@"after");
 }
 @end

@@ -13,10 +13,9 @@
 
 - (void)getPrpStr
 {
-    // property *prp = [property new];
     //継承しているためpropertyを扱うことができる
-    
-    NSLog(@"label is %@", self.label);
+    //この記述がないと実行不可なのは何故
+    //NSLog(@"label is %@", self.label);
     
     //子のポインタを親に持たせる
     [_W_prp setMc:self];

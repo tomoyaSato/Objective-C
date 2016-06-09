@@ -35,11 +35,12 @@ int main(int argc, const char * argv[]) {
         NSLog(@"strong: %@ , weak: %@", strong2, weak2);
     */
         
-        
+        /*
         __strong NSArray *strongArray = @[@"Monday",@"Tuesday"];
         __weak NSArray *weakArray = strongArray;
         // strong : Monday Tuesday / weak Monday Tuesday
         NSLog(@"%@ : %@", strongArray, weakArray);
+         */
         /*
         for (int i = 0; i < strongArray.count; i++) {
             NSLog(@"%@ : %@", strongArray[i], weakArray[i]);
@@ -47,9 +48,9 @@ int main(int argc, const char * argv[]) {
         */
          
         //解放
-        strongArray = @[@"Wednesday",@"Thursday"];
+        //strongArray = @[@"Wednesday",@"Thursday"];
         // strong : Wednesday Thursday  / weak Monday Tuesday
-        NSLog(@"%@ : %@", strongArray, weakArray);
+        //NSLog(@"%@ : %@", strongArray, weakArray);
         /*
         for (int i = 0; i < strongArray.count; i++) {
             NSLog(@"%@ : %@", strongArray[i], weakArray[i]);
